@@ -28,11 +28,6 @@ xyz robot
 <a id = "homelink" style = "font-size:2em" href = "index.html">HOME</a>
 
 
-<div>
-xyzrobot:<span id = "xyzrobot"></span>
-</div>
-
-<div id = "onoffbutton">SINEWAVE ON/OFF</div>
 
 <table>
     
@@ -170,7 +165,7 @@ function draw(){
 
         if(oldxyzrobot != xyzrobot){
             savejson();
-            document.getElementById("xyzrobot").innerHTML = xyzrobot.toString();
+
         }
 
       strokeWeight(5); 
@@ -228,7 +223,7 @@ function draw(){
 
 }
 
-document.getElementById("onoffbutton").onclick = function(){
+document.body.onclick = function(){
     if(noiseon == false){
         osc.start();
         noiseon = true;
