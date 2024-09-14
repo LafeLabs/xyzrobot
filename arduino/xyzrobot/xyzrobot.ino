@@ -88,84 +88,56 @@ void loop() {
 void moveLeft(int nSteps){
      digitalWrite(dirPin1,LOW);
      digitalWrite(enPin1,LOW);
-     digitalWrite(dirPin3,HIGH);
-     digitalWrite(enPin3,LOW);
      
      for(int index = 0;index < nSteps;index++){
        digitalWrite(stepPin1,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin1,LOW);
        delayMicroseconds(delayus); 
-       digitalWrite(stepPin3,HIGH);
-       delayMicroseconds(delayus); 
-       digitalWrite(stepPin3,LOW);
-       delayMicroseconds(delayus); 
 
      }          
      digitalWrite(enPin1,HIGH);   
-     digitalWrite(enPin2,HIGH);   
 }
 
 void moveRight(int nSteps){
      digitalWrite(dirPin1,HIGH);
      digitalWrite(enPin1,LOW);
-     digitalWrite(dirPin3,LOW);
-     digitalWrite(enPin3,LOW);
     
      for(int index = 0;index < nSteps;index++){
        digitalWrite(stepPin1,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin1,LOW);
        delayMicroseconds(delayus); 
-       digitalWrite(stepPin3,HIGH);
-       delayMicroseconds(delayus); 
-       digitalWrite(stepPin3,LOW);
-       delayMicroseconds(delayus); 
 
      }          
      digitalWrite(enPin1,HIGH);   
-     digitalWrite(enPin3,HIGH);   
 
 }
 
 void moveDown(int nSteps){
-     digitalWrite(dirPin1,HIGH);
-     digitalWrite(enPin1,LOW);
      digitalWrite(dirPin3,HIGH);
      digitalWrite(enPin3,LOW);
      
      for(int index = 0;index < nSteps;index++){
-       digitalWrite(stepPin1,HIGH);
-       delayMicroseconds(delayus); 
-       digitalWrite(stepPin1,LOW);
-       delayMicroseconds(delayus); 
        digitalWrite(stepPin3,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin3,LOW);
        delayMicroseconds(delayus); 
      }          
-     digitalWrite(enPin1,HIGH);   
      digitalWrite(enPin3,HIGH);   
 
 }
 
 void moveUp(int nSteps){
-     digitalWrite(dirPin1,LOW);
-     digitalWrite(enPin1,LOW);
      digitalWrite(dirPin3,LOW);
      digitalWrite(enPin3,LOW);     
      for(int index = 0;index < nSteps;index++){
-       digitalWrite(stepPin1,HIGH);
-       delayMicroseconds(delayus); 
-       digitalWrite(stepPin1,LOW);
-       delayMicroseconds(delayus); 
        digitalWrite(stepPin3,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin3,LOW);
        delayMicroseconds(delayus); 
      }          
      digitalWrite(enPin3,HIGH);    
-     digitalWrite(enPin1,HIGH);
 
 }
 
